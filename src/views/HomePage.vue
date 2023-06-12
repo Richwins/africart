@@ -1,11 +1,6 @@
-<template>
-    
-    <div>
-
+<template>    
       <HeaderComponent/>
         <!-- ======= Hero Section ======= -->
-    
-    </div>
 </template>
 
 <script>

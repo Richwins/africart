@@ -2,7 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
-import 'bootstrap/dist/js/bootstrap.js'
+import 'bootstrap/dist/js/bootstrap.js';
+
+
 
 import { createRouter, createWebHistory } from 'vue-router';
 import  HomePage from './views/HomePage';

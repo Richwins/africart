@@ -12,7 +12,7 @@
                 <p>Découvrez une sélection de produits uniques créés par des <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">artisans talentueux</a>, accompagnés d'histoires captivantes sur les traditions culturelles qui les inspirent.</p>
                 <div class="mt-2">
                     <button class="main-button-histoire btn mx-3">Histoires</button>
-                    <button class="main-button-boutique btn mx-3">Boutique</button>
+                    <button class="main-button-boutique btn mx-3">Africart Boutique</button>
                 </div>    
                 
               </div>
@@ -125,7 +125,7 @@ body {
     overflow-x: hidden;
   }
   .mobile-top-fix {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 0px;
   }
   .mobile-bottom-fix {
@@ -137,11 +137,11 @@ body {
 }
 
 .page-section {
-  margin-top: 120px;
+  margin-top: 20px;
 }
 
 .section-heading h2 {
-  font-size: 30px;
+  font-size: 26px;
   text-transform: capitalize;
   color: #2a2a2a;
   font-weight: 700;
@@ -153,11 +153,11 @@ body {
 
 .section-heading h2 em {
   font-style: normal;
-  color: #03a4ed;
+  color: #2a2a2a;
 }
 
 .section-heading h2 span {
-  color: #fe3f40;
+  color: #044f72;
 }
 
 .main-blue-button a {
@@ -175,7 +175,7 @@ body {
 .main-red-button a {
   display: inline-block;
   background-color: #fe3f40;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: #fff;
   text-transform: capitalize;
@@ -187,7 +187,7 @@ body {
 .main-white-button a {
   display: inline-block;
   background-color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: #fe3f40;
   text-transform: capitalize;
@@ -206,7 +206,6 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 150px 0px 120px 0px;
   position: relative;
   overflow: hidden;
 }
@@ -247,12 +246,12 @@ Banner Style
 .main-banner .left-content h2 {
   font-size: 50px;
   font-weight: 700;
-  color: #2a2a2a;
+  color: #044f72;
   line-height: 72px;
 }
 
 .main-banner .left-content h2 em {
-  color: #03a4ed;
+  color: #044f72;
   font-style: normal;
 }
 
@@ -261,11 +260,11 @@ Banner Style
 }
 
 .main-banner .left-content p {
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 .main-button-boutique {
   background-color:#fe3f40 ;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: #fff;
   padding: 12px 25px;
@@ -277,9 +276,9 @@ Banner Style
 
 .main-button-histoire{
 
-  background-color: #03a4ed; 
+  background-color: #044f72; 
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   padding: 12px 25px;
   border-radius: 23px;
@@ -299,15 +298,15 @@ responsive
 
 @media (max-width: 992px) {
   .main-banner {
-    padding-top: 50px;
+    padding-top: 10px;
   }
   .main-banner .left-content {
     margin-right: 0px;
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
   }
   .main-banner:after {
-    top: 76px;
+    top: 20px;
     z-index: -1;
   }
   .main-banner .left-content form,

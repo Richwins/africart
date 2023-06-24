@@ -11,8 +11,7 @@ export default {
   name: 'HomePage',
   components : {HeaderComponent,
     NavBar
-}
-    
+}   
 }
 
 </script>

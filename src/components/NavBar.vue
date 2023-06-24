@@ -1,25 +1,31 @@
 <template>
   <div class="container-fluid topBar text-white py-0 ">
-    <div class="row align-items-center py-0 px-xl-5 my-0">
-      <div class="col-lg-2 d-none d-lg-block row d-flex align-items-center">
-        <a class="logo navbar-brand col-6">
+    <div class="row align-items-center py-0 px-xl-5 my-0 mx-3 mx-lg-0">
+      <div class="col-lg-2 col d-flex align-items-center">
+        <i class="logo bi bi-list text-white mx-1 d-inline-block d-lg-none"></i>
+        <a class="logo navbar-brand col-6 order-1">
           <h4>AFRIC<span>ART</span></h4>
         </a>
       </div>
-      <div class="col-lg-1 d-none d-lg-block row d-flex align-items-center">
-        <a class="text-white col-6 small mt-3">
-            <i class="bi bi-geo-alt h4"></i><small>Livraison</small> <strong> {{User.adresse_livraison}}</strong>
+      <div class="col-lg-2 d-none d-lg-block row d-flex align-items-center text-center order-lg-2">
+        <div class="menu-bouton">
+          <a class="text-white col-6 small mt-3">
+            <i class="bi bi-geo-alt h4"></i><small>Votre adresse de livraison </small> <strong>
+              {{ User.adresse_livraison }}</strong>
           </a>
+        </div>
       </div>
-      
-      <div class="col-lg-6 col-6 text-start">
+      <div class="col-lg-5 text-start order-4 order-lg-3">
         <form class="form-inline my-lg-0 ml-auto">
           <div class="input-group search">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Toutes nos catégories</button>
+            <button class="btn btn-outline-secondary text-secondary dropdown-toggle d-none d-sm-block" type="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Toutes nos catégories</button>
             <ul class="dropdown-menu mb-0">
-              <li v-for="categorie in categories" :key="categorie.id"><a class="dropdown-item" href="#">{{ categorie.name }}</a><hr class="dropdown-divider"></li>
+              <li v-for="categorie in categories" :key="categorie.id"><a class="dropdown-item p-2" href="#">{{ categorie.name
+              }}</a></li>
             </ul>
-            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Rechercher un produit ou une histoire">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button"
+              placeholder="De quoi avez vous besoin?">
             <div class="input-group-append">
               <button class="btn btn-search" type="submit">
                 <i class="bi bi-search"></i>
@@ -28,28 +34,40 @@
           </div>
         </form>
       </div>
-      <div class="col-lg-2 col-6 text-center">
-        <a class="text-white col-6 small mt-3">
-            <i class="bi bi-person-fill h4"></i><small>Bonjour,</small> <strong> Identifiez-vous</strong>
-          </a>
+      <div class="col-lg-2 col-auto text-center menu-bouton p-2 order-2 order-lg-4 ms-auto">
+        <a class="text-white">
+          <span class="d-lg-none d-inline-block">Se connecter</span><i class="bi bi-person-fill h4"></i><span
+            class="d-none d-lg-inline-block"><small>Bonjour,</small> <strong> Identifiez-vous</strong></span>
+        </a>
       </div>
-      <div class="col-lg-1 col-6 text-end">
-        <a href="" class="btn">
-          <i class="bi bi-cart3 panier h1"></i>
-          <span class="badge h2">0</span>
-
+      <div class="col-lg-1 col-auto text-end order-3 order-lg-5 ms-auto">
+        <a href="" class="btn menu-bouton">
+          <i class="bi bi-cart3 panier"></i>
+          <span class="badge">0</span>
         </a>
       </div>
     </div>
+
+    <div class="row mt-2 d-lg-none d-block" id="menu-container">
+      <div class="container">
+        <div class="d-flex">
+          <div class="menu-scroll">
+            <a class="menu-item menu-bouton p-2">Meilleurs ventes</a>
+            <a class="menu-item menu-bouton p-2">Africart Boutique</a>
+            <a class="menu-item menu-bouton p-2">Services Clients</a>
+            <a class="menu-item menu-bouton p-2">Dernières nouveautés</a>
+            <a class="menu-item menu-bouton p-2">Ventes Flash</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light border-sm menu-navbar text-white">
+  
+
+  <nav class="navbar d-lg-block d-none navbar-expand-lg navbar-light border-sm menu-navbar text-white">
     <div class="container">
-      <a class="logo navbar-brand d-block d-lg-none">
-        <h4>AFRIC<span>ART</span></h4>
-      </a>
-
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,7 +75,7 @@
       <div class="collapse navbar-collapse text-white" id="navbarNav">
         <ul class="navbar-nav mr-auto text-white">
           <li class="nav-item">
-            <a class="nav-link" href="#"><span class="navbar-toggler-icon mx-1"></span>Menu</a>
+            <a class="nav-link" href="#"><i class="bi bi-list text-white"></i>Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Meilleurs ventes</a>
@@ -74,9 +92,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Ventes Flash</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Histoires</a>
-          </li>
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
@@ -86,6 +101,13 @@
       </div>
     </div>
   </nav>
+  <div class="d-lg-none d-block border-sm text-white mt-0 p-2 px-4 adresse-livraison">
+    <a class="text-white ">
+            <i class="bi bi-geo-alt h4"></i>Votre adresse de livraison: <strong>
+              {{ User.adresse_livraison }}</strong>
+          </a>
+  </div>
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 </template>
@@ -94,10 +116,10 @@
 
 export default {
   name: 'NavBar',
-  data(){
-    return{
-      User:{
-        adresse_livraison:'Bénin'
+  data() {
+    return {
+      User: {
+        adresse_livraison: 'Bénin'
       },
       categories: [
         { id: 1, name: 'Sculpture' },
@@ -121,26 +143,59 @@ export default {
 /**
 * Desktop Navigation 
 */
+#menu-container .d-flex {
+  overflow-x: hidden;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#menu-container .menu-scroll {
+  display: flex;
+  overflow-x: auto;
+}
+
+#menu-container .menu-item {
+  margin: 5px 0 5px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
 
 .topBar {
-  background-color: #04557a;
+  background-color: #033248;
 }
-.search{
-  font-size:12px;
+
+.search {
+  font-size: 12px;
 }
-.search .dropdown-toggle, .search .dropdown-toggle:hover ,.search .dropdown-toggle:focus{
-  background-color:#fff;
-  font-size:12px;
+
+.search .dropdown-toggle,
+.search .dropdown-toggle:hover,
+.search .dropdown-toggle:focus {
+  background-color: #fff;
+  font-size: 12px;
 }
-.search .form-control{
-  font-size:14px;
+
+.search .form-control {
+  font-size: 14px;
 }
-.search .dropdown-item{
-  font-size:12px;
+
+.search .dropdown-item {
+  font-size: 14px;
 }
-.search .btn-search{
+
+.search .dropdown-item:focus, .search .dropdown-item:hover{
+  font-size: 14px;
   background-color: #fe3f40;
-  color:#fff;
+  color: #fff;
+}
+
+.search .btn-search {
+  background-color: #fe3f40;
+  color: #fff;
 }
 
 .logo {
@@ -166,9 +221,10 @@ export default {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
 .logo .livraison {
   font-size: 12px;
-  font-weight:none;
+  font-weight: none;
   text-transform: none;
   color: #fff;
 }
@@ -176,7 +232,7 @@ export default {
 
 .logo h4 span {
   color: #fe3f40;
- 
+
 }
 
 .logo h4 {
@@ -185,22 +241,28 @@ export default {
 
 .panier {
   color: #fff;
+  font-size: 30px;
   position: relative;
 
+
 }
-.badge{
-  color: #fe3f40;
-  font-weight:700;
-  font-size:18px;
+
+.badge {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  color: #fe3f40;
+  inset: -2px -5px auto auto;
+  font-weight: 700;
+  font-size: 18px;
   padding: 1px 2px;
 }
 
 .navbar {
   padding: 0;
-  background-color: #044f72;
+  background-color: #033c56;
+}
+.adresse-livraison{
+  background-color: #033c56;
+
 }
 
 .navbar ul {
@@ -239,7 +301,16 @@ export default {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #fe3f40;
+  background-color: #fe3f40;
+  color: #fff;
+
+}
+
+.menu-bouton:hover,
+.menu-bouton:focus {
+  border: 1px solid #fff;
+  color: #fff;
+
 }
 
 .navbar .dropdown ul {

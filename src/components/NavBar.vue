@@ -3,7 +3,7 @@
     <div class="row align-items-center py-0 px-xl-5 my-0 mx-3 mx-lg-0">
       <div class="col-lg-2 col d-flex align-items-center">
         <i class="logo bi bi-list text-white mx-1 d-inline-block d-lg-none"></i>
-        <a class="logo navbar-brand col-6 order-1">
+        <a class="logo navbar-brand order-1">
           <h4>AFRIC<span>ART</span></h4>
         </a>
       </div>
@@ -15,8 +15,8 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-5 col-9 text-start order-4 order-lg-3">
-        <form class="form-inline my-lg-0 ml-auto">
+      <div class="col-lg-5 text-start order-4 order-lg-3">
+        <form class="form-inline my-lg-0">
           <div class="input-group search">
             <button class="btn btn-outline-secondary text-secondary dropdown-toggle d-none d-sm-block" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">Toutes nos catégories</button>
@@ -24,7 +24,7 @@
               <li v-for="categorie in categories" :key="categorie.id"><a class="dropdown-item p-2" href="#">{{ categorie.name
               }}</a></li>
             </ul>
-            <input type="text" class="form-control" aria-label="Text input with dropdown button"
+            <input type="text" class="form-control rounded" aria-label="Text input with dropdown button"
               placeholder="De quoi avez vous besoin?">
             <div class="input-group-append">
               <button class="btn btn-search" type="submit">
@@ -34,13 +34,13 @@
           </div>
         </form>
       </div>
-      <div class="col-lg-2 col-auto text-center menu-bouton p-2 order-2 order-lg-4 ms-auto">
+      <div class="col-lg-2 d-none d-lg-block text-center menu-bouton p-2 order-2 order-lg-4">
         <a class="text-white">
-          <span class="d-lg-none d-inline-block">Se connecter</span><i class="bi bi-person-fill h4"></i><span
+        <i class="bi bi-person-fill h4"></i><span
             class="d-none d-lg-inline-block"><small>Bonjour,</small> <strong> Identifiez-vous</strong></span>
         </a>
       </div>
-      <div class="col-lg-1 col text-end order-5 order-lg-5">
+      <div class="col-lg-1 col text-end order-lg-5">
         <a href="" class="btn menu-bouton">
           <i class="bi bi-cart3 panier"></i>
           <span class="badge">0</span>

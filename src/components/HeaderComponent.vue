@@ -13,7 +13,7 @@
                   captivantes sur les traditions culturelles qui les inspirent.</p>
                 <div class="mt-4 ">
                   <button class="main-button-histoire btn mx-lg-3 mx-1 my-2">Devenir vendeur</button>
-                  <button class="main-button-boutique btn mx-lg-3 mx-1 my-2">Parcourir</button>
+                  <button class="main-button-boutique btn mx-lg-3 mx-1 my-2">Se connecter</button>
                 </div>
 
               </div>

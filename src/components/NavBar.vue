@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid topBar text-white py-0 ">
-    <div class="row align-items-center py-0 px-xl-5 my-0 mx-3 mx-lg-0">
+    <div class="row align-items-center py-0 my-0  mx-lg-0">
       <div class="col-lg-2 col d-flex align-items-center">
-        <i class="logo bi bi-list text-white mx-1 d-inline-block d-lg-none"></i>
+        <i class="logo bi bi-list text-white ms-1 d-inline-block d-lg-none"></i>
         <a class="logo navbar-brand order-1">
           <h4>AFRIC<span>ART</span></h4>
         </a>

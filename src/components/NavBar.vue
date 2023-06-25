@@ -15,7 +15,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-5 text-start order-4 order-lg-3">
+      <div class="col-lg-5 col-9 text-start order-4 order-lg-3">
         <form class="form-inline my-lg-0 ml-auto">
           <div class="input-group search">
             <button class="btn btn-outline-secondary text-secondary dropdown-toggle d-none d-sm-block" type="button"
@@ -40,7 +40,7 @@
             class="d-none d-lg-inline-block"><small>Bonjour,</small> <strong> Identifiez-vous</strong></span>
         </a>
       </div>
-      <div class="col-lg-1 col-auto text-end order-3 order-lg-5 ms-auto">
+      <div class="col-lg-1 col text-end order-5 order-lg-5">
         <a href="" class="btn menu-bouton">
           <i class="bi bi-cart3 panier"></i>
           <span class="badge">0</span>
@@ -243,8 +243,6 @@ export default {
   color: #fff;
   font-size: 30px;
   position: relative;
-
-
 }
 
 .badge {
@@ -252,8 +250,25 @@ export default {
   color: #fe3f40;
   inset: -2px -5px auto auto;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   padding: 1px 2px;
+}
+
+@media (max-width: 375px) {
+  .panier {
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  color: #fe3f40;
+  inset: -2px -5px auto auto;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 1px 2px;
+}
 }
 
 .navbar {

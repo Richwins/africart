@@ -241,7 +241,7 @@ export default {
 
 .panier {
   color: #fff;
-  font-size: 30px;
+  font-size: 35px;
   position: relative;
 }
 
@@ -252,23 +252,6 @@ export default {
   font-weight: 700;
   font-size: 16px;
   padding: 1px 2px;
-}
-
-@media (max-width: 375px) {
-  .panier {
-  color: #fff;
-  font-size: 20px;
-  position: relative;
-}
-
-.badge {
-  position: absolute;
-  color: #fe3f40;
-  inset: -2px -5px auto auto;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 1px 2px;
-}
 }
 
 .navbar {

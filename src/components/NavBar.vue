@@ -1,8 +1,14 @@
 <template>
+
+<SidebarComponent/>
+
   <div class="container-fluid topBar text-white py-0 ">
     <div class="row align-items-center py-0 my-0  mx-lg-0">
       <div class="col-lg-2 col d-flex align-items-center">
-        <i class="logo bi bi-list text-white ms-1 d-inline-block d-lg-none"></i>
+        <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01" @click="handleClick"><i
+            class="logo bi bi-list text-white ms-1 d-inline-block d-lg-none"></i>
+        </button>
         <a class="logo navbar-brand order-1">
           <h4>AFRIC<span>ART</span></h4>
         </a>
@@ -21,7 +27,8 @@
             <button class="btn btn-outline-secondary text-secondary dropdown-toggle d-none d-sm-block" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">Toutes nos catégories</button>
             <ul class="dropdown-menu mb-0">
-              <li v-for="categorie in categories" :key="categorie.id"><a class="dropdown-item p-2" href="#">{{ categorie.name
+              <li v-for="categorie in categories" :key="categorie.id"><a class="dropdown-item p-2" href="#">{{
+                categorie.name
               }}</a></li>
             </ul>
             <input type="text" class="form-control rounded" aria-label="Text input with dropdown button"
@@ -36,8 +43,8 @@
       </div>
       <div class="col-lg-2 d-none d-lg-block text-center menu-bouton p-2 order-2 order-lg-4">
         <a class="text-white">
-        <i class="bi bi-person-fill h4"></i><span
-            class="d-none d-lg-inline-block"><small>Bonjour,</small> <strong> Identifiez-vous</strong></span>
+          <i class="bi bi-person-fill h4"></i><span class="d-none d-lg-inline-block"><small>Bonjour,</small> <strong>
+              Identifiez-vous</strong></span>
         </a>
       </div>
       <div class="col-lg-1 col text-end order-lg-5">
@@ -64,7 +71,7 @@
 
   </div>
 
-  
+
 
   <nav class="navbar d-lg-block d-none navbar-expand-lg navbar-light border-sm menu-navbar text-white">
     <div class="container">
@@ -75,7 +82,7 @@
       <div class="collapse navbar-collapse text-white" id="navbarNav">
         <ul class="navbar-nav mr-auto text-white">
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-list text-white"></i>Menu</a>
+            <a class="nav-link" @click="handleClick"><i class="bi bi-list text-white logo"></i>Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Meilleurs ventes</a>
@@ -103,9 +110,9 @@
   </nav>
   <div class="d-lg-none d-block border-sm text-white mt-0 p-2 px-4 adresse-livraison">
     <a class="text-white ">
-            <i class="bi bi-geo-alt h4"></i>Votre adresse de livraison: <strong>
-              {{ User.adresse_livraison }}</strong>
-          </a>
+      <i class="bi bi-geo-alt h4"></i><small>Votre adresse de livraison </small><strong>
+        {{ User.adresse_livraison }}</strong>
+    </a>
   </div>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -113,9 +120,12 @@
 </template>
 
 <script>
+import SidebarComponent from './SidebarComponent';
 
 export default {
   name: 'NavBar',
+  components : {SidebarComponent},
+
   data() {
     return {
       User: {
@@ -130,7 +140,24 @@ export default {
         { id: 6, name: 'Poterie et céramique' },
       ]
     }
-  }
+  },
+  methods: {
+        handleClick() {
+            // Ajouter la classe "box-open" à body
+            document.body.classList.add("box-collapse-open");
+
+            // Supprimer la classe "close" de body
+            document.body.classList.remove("box-collapse-closed");
+        },
+        closebox() {
+            // Ajouter la classe "box-open" à body
+            document.body.classList.add("box-collapse-closed");
+
+            // Supprimer la classe "close" de body
+            document.body.classList.remove("box-collapse-open");
+        },
+    }
+
 
 }
 </script>
@@ -140,9 +167,7 @@ export default {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
+
 #menu-container .d-flex {
   overflow-x: hidden;
   font-size: 14px;
@@ -187,7 +212,8 @@ export default {
   font-size: 14px;
 }
 
-.search .dropdown-item:focus, .search .dropdown-item:hover{
+.search .dropdown-item:focus,
+.search .dropdown-item:hover {
   font-size: 14px;
   background-color: #fe3f40;
   color: #fff;
@@ -258,7 +284,8 @@ export default {
   padding: 0;
   background-color: #033c56;
 }
-.adresse-livraison{
+
+.adresse-livraison {
   background-color: #033c56;
 
 }

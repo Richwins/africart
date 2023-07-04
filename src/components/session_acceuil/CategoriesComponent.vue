@@ -114,7 +114,7 @@
                         <div class="py-5">
                             <h5 class="mt-3"><b>Inscrivez vous pour améliorer votre expérience utilisateur</b> </h5>
                             <div class="mt-5 text-center">
-                               <router-link to="connexion" ><a href="" class="main-button-histoire"> Se connecter en toute sécurité </a></router-link> 
+                               <router-link to="connexion" ><a href="" class="main-button-boutique"> Se connecter en toute sécurité </a></router-link> 
                             </div>
                         </div>
 

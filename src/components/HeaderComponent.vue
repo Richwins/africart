@@ -1,14 +1,14 @@
 <template>
-  <div class="main-banner bg-white wow fadeIn pt-lg-5" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+  <div class="main-banner bg-white wow fadeIn pt-5" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="row">
-            <div class="col-lg-6 align-self-center d-none d-lg-block">
+            <div class="col-lg-6 align-self-center">
               <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <h6>Bienvenue sur africart</h6>
                 <h2>Découvrez les <em>produits artisanaux</em> &amp; <span>uniques </span> </h2>
-                <p>Découvrez une sélection de produits uniques créés par des <a rel="nofollow"
+                <p class="">Découvrez une sélection de produits uniques créés par des <a rel="nofollow"
                     href="https://templatemo.com/page/1" target="_parent">artisans talentueux</a>, accompagnés d'histoires
                   captivantes sur les traditions culturelles qui les inspirent.</p>
                 <div class="mt-4 ">
@@ -18,25 +18,25 @@
 
               </div>
             </div>
-            <div class="col-lg-6 position-relative m-0 p-0 border-0">
-              <div class=" text-white align-self-center position-absolute border-0 fixed-top h-100 w-100 top-0 start-0 d-none d-lg-block">
-                <img src="../assets/images/bg-banner.png" class=" border-0 w-100 h-100" alt="...">
+            <div class="col-lg-6 position-relative m-0 p-0 d-none d-lg-block border-0">
+              <div class=" text-white align-self-center position-absolute border-0 fixed-top h-100 w-100 top-0 start-0">
+                <img src="../assets/images/bg-banner.png" class="d-block border-0 w-100 h-100" alt="...">
               </div>
-                <div class="m-0 p-0 right-image wow fadeInRight w-100" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="m-0 p-0 right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner w-100">
-                      <div class="carousel-item active w-100" data-bs-interval="10000">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
                         <img src="../assets/images/Sculpture.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                       </div>
-                      <div class="carousel-item w-100" data-bs-interval="2000">
+                      <div class="carousel-item" data-bs-interval="2000">
                         <img src="../assets/images/Sculpture.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
                       </div>
-                      <div class="carousel-item w-100">
+                      <div class="carousel-item">
                         <img src="../assets/images/Sculpture.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
 
@@ -336,7 +336,7 @@ Banner Style
 
 .main-banner .left-content h6 {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 12px;
   color: #fe3f40;
   margin-bottom: 15px;
 }
@@ -348,7 +348,19 @@ Banner Style
   line-height: 72px;
 }
 
+@media (max-width: 768px) {
+  .main-banner .left-content h2 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+}
 
+@media (max-width: 480px) {
+  .main-banner .left-content h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
 
 .main-banner .left-content h2 em {
   color: #033248;
@@ -421,7 +433,9 @@ responsive
 */
 
 @media (max-width: 992px) {
-
+  .main-banner {
+    padding-top: 10px;
+  }
 
   .main-banner .left-content {
     margin-right: 0px;

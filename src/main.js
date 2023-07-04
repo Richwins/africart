@@ -19,6 +19,8 @@ import 'echarts';
 
 import { createRouter, createWebHistory } from 'vue-router';
 import  HomePage from './views/HomePage';
+import  LoginPage from './views/authentification/LoginPage';
+import  RegisterPage from './views/authentification/RegisterPage';
 
 
 const app = createApp(App);
@@ -27,6 +29,14 @@ const routes = [
     {
       path: '/',
       component: HomePage,
+    },
+    {
+      path: '/connexion',
+      component: LoginPage,
+    },
+    {
+      path: '/inscription',
+      component: RegisterPage,
     },
   ];
 

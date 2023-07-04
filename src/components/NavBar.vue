@@ -1,6 +1,5 @@
 <template>
-
-<SidebarComponent/>
+  <SidebarComponent />
 
   <div class="container-fluid topBar text-white py-0 ">
     <div class="row align-items-center py-0 my-0  mx-lg-0">
@@ -42,10 +41,12 @@
         </form>
       </div>
       <div class="col-lg-2 d-none d-lg-block text-center menu-bouton p-2 order-2 order-lg-4">
-        <a class="text-white">
-          <i class="bi bi-person-fill h4"></i><span class="d-none d-lg-inline-block"><small>Bonjour,</small> <strong>
-              Identifiez-vous</strong></span>
-        </a>
+        <router-link to="/connexion">
+          <a class="text-white">
+            <i class="bi bi-person-fill h4"></i><span class="d-none d-lg-inline-block"><small>Bonjour,</small> <strong>
+                Identifiez-vous</strong></span>
+          </a>
+        </router-link>
       </div>
       <div class="col-lg-1 col text-end order-lg-5">
         <a href="" class="btn menu-bouton">
@@ -59,8 +60,8 @@
       <div class="container">
         <div class="d-flex">
           <div class="menu-scroll">
+            <a class="menu-item menu-bouton p-2">Catégories de produits</a>
             <a class="menu-item menu-bouton p-2">Meilleurs ventes</a>
-            <a class="menu-item menu-bouton p-2">Africart Boutique</a>
             <a class="menu-item menu-bouton p-2">Services Clients</a>
             <a class="menu-item menu-bouton p-2">Dernières nouveautés</a>
             <a class="menu-item menu-bouton p-2">Ventes Flash</a>
@@ -88,7 +89,7 @@
             <a class="nav-link" href="#">Meilleurs ventes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Africart Boutique</a>
+            <a class="nav-link" href="#">Catégories de produits</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Services Clients</a>
@@ -114,9 +115,6 @@
         {{ User.adresse_livraison }}</strong>
     </a>
   </div>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
 </template>
 
 <script>
@@ -124,7 +122,7 @@ import SidebarComponent from './SidebarComponent';
 
 export default {
   name: 'NavBar',
-  components : {SidebarComponent},
+  components: { SidebarComponent },
 
   data() {
     return {
@@ -142,21 +140,21 @@ export default {
     }
   },
   methods: {
-        handleClick() {
-            // Ajouter la classe "box-open" à body
-            document.body.classList.add("box-collapse-open");
+    handleClick() {
+      // Ajouter la classe "box-open" à body
+      document.body.classList.add("box-collapse-open");
 
-            // Supprimer la classe "close" de body
-            document.body.classList.remove("box-collapse-closed");
-        },
-        closebox() {
-            // Ajouter la classe "box-open" à body
-            document.body.classList.add("box-collapse-closed");
+      // Supprimer la classe "close" de body
+      document.body.classList.remove("box-collapse-closed");
+    },
+    closebox() {
+      // Ajouter la classe "box-open" à body
+      document.body.classList.add("box-collapse-closed");
 
-            // Supprimer la classe "close" de body
-            document.body.classList.remove("box-collapse-open");
-        },
-    }
+      // Supprimer la classe "close" de body
+      document.body.classList.remove("box-collapse-open");
+    },
+  }
 
 
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+  <div class="main-banner bg-white wow fadeIn pt-5" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -12,15 +12,15 @@
                     href="https://templatemo.com/page/1" target="_parent">artisans talentueux</a>, accompagnés d'histoires
                   captivantes sur les traditions culturelles qui les inspirent.</p>
                 <div class="mt-4 ">
-                  <button class="main-button-histoire btn mx-lg-3 mx-1 my-2">Devenir vendeur</button>
-                  <button class="main-button-boutique btn mx-lg-3 mx-1 my-2">Se connecter</button>
+                  <router-link to="/inscription"> <button class="main-button-histoire btn mx-lg-3 mx-1 my-2">Devenir vendeur</button></router-link>
+                  <router-link to="/connexion"><button class="main-button-boutique btn mx-lg-3 mx-1 my-2">Se connecter</button></router-link>
                 </div>
 
               </div>
             </div>
-            <div class="col-lg-6 position-relative m-0 p-0 d-none d-lg-block">
-              <div class=" text-white align-self-center position-absolute fixed-top h-100 w-100 top-0 start-0">
-                <img src="../assets/images/bg-banner.png" class="d-block w-100 h-100" alt="...">
+            <div class="col-lg-6 position-relative m-0 p-0 d-none d-lg-block border-0">
+              <div class=" text-white align-self-center position-absolute border-0 fixed-top h-100 w-100 top-0 start-0">
+                <img src="../assets/images/bg-banner.png" class="d-block border-0 w-100 h-100" alt="...">
               </div>
                 <div class="m-0 p-0 right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -63,7 +63,7 @@
   </div>
 </template>
 
-<script>0
+<script>
 //import NavBar from './NavBar'
 export default {
   name: 'HerderComponent',
@@ -156,10 +156,12 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background-color: #ffffffbb;
+  background-color: #f4f4f4;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -198,7 +200,6 @@ global styles
 */
 html,
 body {
-  background: #fff;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -373,6 +374,7 @@ Banner Style
   outline: none;
   border: none;
 }
+
 
 .main-button-boutique:hover,
 .main-button-boutique:focus {

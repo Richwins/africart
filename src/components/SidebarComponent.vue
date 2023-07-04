@@ -13,6 +13,12 @@
         <div class="box-collapse-wrap">
 
             <ul class="sidebar-nav row" id="sidebar-nav">
+                <li class="nav-heading">AFRICART</li>
+                <li class="nav-item " >
+                    <a class="nav-link collapsed" href="">
+                        <span>Page d'acceuil Africart</span>
+                    </a>
+                </li>
                 <li class="nav-heading">Tendances</li>
                 <li class="nav-item " >
                     <a class="nav-link collapsed" href="">
@@ -358,8 +364,8 @@ export default {
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   color: #000;
   transition: 0.3;
   background: #f6f9ff;
@@ -368,7 +374,7 @@ export default {
 }
 
 .sidebar-nav .nav-link i {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 10px;
   color: #000;
 }
